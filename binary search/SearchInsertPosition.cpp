@@ -3,9 +3,9 @@
 
 using namespace std;
 
-class BinarySearch {
+class SearchInsertPosition {
 public:
-    int search(vector<int>& nums, int target) {
+    int searchInsert(vector<int>& nums, int target) {
         int left = 0;
         int right = nums.size() - 1;
 
@@ -23,17 +23,17 @@ public:
             }
         }
 
-        return -1;
+        return left;
     }
 };
 
 int main() {
-    vector<int> nums = {-1, 0, 3, 5, 9, 12};
-    int target = 9;
+    vector<int> nums = {1, 3, 5, 6};
+    int target = 5;
 
-    BinarySearch obj;
+    SearchInsertPosition obj;
 
-    cout << obj.search(nums, target);
+    cout << obj.searchInsert(nums, target);
 
     return 0;
 }
